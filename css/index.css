@@ -6,22 +6,6 @@
 
 }
 
-.Navigation{
-  overflow: hidden;
-}
-
-.Navigation a{
-  display: block;
-  border-right-style: inset;
-  padding: 8px 16px;
-  float:left;
-
-}
-
-.Navigation a:hover{
-  opacity: 75%;
-}
-
 img{
 opacity: 75%;
 margin: auto;
@@ -29,4 +13,21 @@ padding: auto;
 display: block;
 height: 100vh;
 width: auto;
+}
+
+#Bayern:hover{
+  border-color: black;
+}
+
+
+#footer{
+  text-align: center;
+}
+
+#footer a{
+  text-decoration: none;
+}
+
+#footer a:hover{
+  opacity: 75%;
 }
