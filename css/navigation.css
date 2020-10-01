@@ -1,0 +1,19 @@
+.Navigation{
+    overflow: hidden;
+}
+  
+.Navigation a{
+    display: block;
+    border-right-style: inset;
+    text-decoration: none;
+    padding: 8px 16px;
+    float:left;
+}
+  
+.Navigation a:hover{
+    opacity: 75%;
+}
+
+#current{
+    color: brown;
+}
