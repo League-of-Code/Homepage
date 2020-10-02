@@ -1,0 +1,22 @@
+.germany{
+    width: 30%;
+    margin: auto;
+}
+
+.germany path{
+    fill: rgb(95, 95, 95);
+    stroke: white;
+    stroke-width: 2px;
+    transition: fill 0.3s;
+}
+
+.germany :hover{
+    fill: brown;
+}
+
+@media screen and (max-width: 1080px){
+    .germany{
+        width: 70%;
+        margin: auto;
+    }
+}
