@@ -2,8 +2,13 @@
   font-family: bahnschrift;
   font-size: 4vh;
   color: white;
-  background-color: rgb(117,3,3);
+  background-color: rgb(75, 0, 0);
 
+}
+
+#überschrift, #text{
+  text-align: center;
+  margin-top: 100px;
 }
 
 #footer{
