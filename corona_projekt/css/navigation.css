@@ -1,11 +1,11 @@
 .Navigation{
     overflow: hidden;
+    text-decoration: none;
 }
   
 .Navigation a{
     display: block;
     border-right-style: inset;
-    text-decoration: none;
     padding: 8px 16px;
     float:left;
 }

@@ -13,7 +13,7 @@ function klick(){
 
 function bewegeElemente(){
     karte.style.transform = "translate(-34vw, 0)";
-//	diagramm.style.transform = "translate(-55vw,0)";
+	diagramm.style.transform = "translate(-55vw,0)";
 }
 
 function extract_values(bundesland) {
