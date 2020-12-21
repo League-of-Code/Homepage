@@ -40,7 +40,7 @@ function extract_values(bundesland) {
 function visualize_numbers(numbers) {
 		var chart = new CanvasJS.Chart("chartContainer", {
 		animationEnabled: true,
-		theme: "light1", // "light1", "light2", "dark1", "dark2"
+		theme: "dark1", // "light1", "light2", "dark1", "dark2"
 		title:{
 			text: "Coronadaten: " + numbers[0]
 		},
