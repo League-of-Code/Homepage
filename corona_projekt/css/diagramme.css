@@ -16,6 +16,10 @@
     fill: brown;
 }
 
+#chartContainer{
+    transition: all 1000ms ease;
+}
+
 @media screen and (max-width: 1080px){
     .germany{
         width: 70%;
