@@ -1,9 +1,8 @@
-*{
+body{
   font-family: bahnschrift;
   font-size: 4vh;
   color: white;
-  background-color: rgb(75, 0, 0);
-
+  background-color: rgb(75, 75, 75);
 }
 
 #überschrift, #text{

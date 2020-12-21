@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>void Chartrequest</title>
+  </head>
+  <body style="background-color:grey">
+	  
+	  <form action=""> 
+		  <select name="customers" onchange="showCustomer(this.value)">
+			  <option value="">Select a customer:</option>
+			  <option value="Berlin">Berlin</option>
+			  <option value="Bayern">Bayern</option>
+			  <option value="Sachsen">Sachsen</option>
+			  <option value="Nieder­sachsen">Niedersachsen</option>
+		  </select>
+	  </form>
+	  <br>
+	  <div id="txtHint">Customer info will be listed here...</div>
+	  <script>
+		  function showCustomer(str) {
+			  var xhttp;  
+			  if (str == "") 
+			  {
+				  document.getElementById("txtHint").innerHTML = "";
+				  return;
+			  }
+			  xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				  if (this.readyState == 4 && this.status == 200)
+				  {
+					  var data=this.responseText.split("|");
+					  dia(data);
+					  
+				  }
+			  };
+			  xhttp.open("GET", "ordered_output.php?q="+str, true);
+			  xhttp.send();
+			  }
+function dia(daten){
+	var chart = new CanvasJS.Chart("chartContainer", {
+		animationEnabled: true,
+		theme: "light2", // "light1", "light2", "dark1", "dark2"
+		title:{
+			text: "Coronadaten"
+		},
+		axisY: {
+			title: "involved people"
+		},
+		data: [{        
+			type: "column",  
+			showInLegend: true, 
+			legendMarkerColor: "grey",
+			legendText: "Fallzahlen aus "+daten[0]+" am "+daten[1],
+			dataPoints: [      
+				{ y: parseInt(daten[3],10),  label: "Neuinfektion" },
+				{ y: parseInt(daten[4],10),  label: "sevendays_incidence" },
+				{ y: parseInt(daten[5],10),  label: "sevendays_cases" },
+				{ y: parseInt(daten[6],10),  label: "Todesfälle" },
+			]
+		}]
+	});
+	chart.render();
+}
+	  </script>
+	  <script src="canvasjs.min.js"></script>
+	  <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+  </body>
+</html>
