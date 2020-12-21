@@ -1,7 +1,6 @@
 html{
   max-width: 100%;
   overflow-x: hidden;
-  text-decoration: none;
 }
 
 body{
@@ -9,6 +8,7 @@ body{
   font-size: 4vh;
   color: white;
   background-color: rgb(75, 75, 75);
+  text-decoration: none;
 }
 
 #überschrift, #text{
