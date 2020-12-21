@@ -16,7 +16,10 @@
     fill: brown;
 }
 
-
+#chartContainer{
+    position: absolute;
+    translate: 100vw,0;
+}
 
 @media screen and (max-width: 1080px){
     .germany{
