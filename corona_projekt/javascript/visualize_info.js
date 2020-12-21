@@ -1,5 +1,5 @@
 //WICHTIG: Um das ganze hier funktionieren zu lassen muss bei diagramme_2.html für jedes onclick = ... ein:
-//onclick = extract_values(bundesland); visualize_numbers(numbers_today); 
+//onclick = extract_values(bundesland); visualize_numbers(numbers_today);
 //... eingesetzt werden. Ohne diesen Tausch funktioniert die Datenbankabfrage nicht.
 
 var karte = document.getElementById("deutschland");
@@ -13,14 +13,14 @@ function klick(){
 
 function bewegeElemente(){
     karte.style.transform = "translate(-34vw, 0)";
-	diagramm.style.transform = "translate(-55vw,0)";
+//	diagramm.style.transform = "translate(-55vw,0)";
 }
 
 function extract_values(bundesland) {
 	klick();
 	if (bundesland == "") {
-		document.getElementById("txtHint").innerHTML = ""; 
-		return; 
+		document.getElementById("txtHint").innerHTML = "";
+		return;
 	}
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -47,13 +47,13 @@ function visualize_numbers(numbers) {
 		axisY: {
 			title: "involved people"
 		},
-		data: [{        
-			type: "column",  
+		data: [{
+			type: "column",
 			showInLegend: true,
 			backgroundColor: "grey",
 			legendMarkerColor: "grey",
 			legendText: "Fallzahlen aus " + numbers[0] + " am " + numbers[1],
-			dataPoints: [      
+			dataPoints: [
 				{ y: parseInt(numbers[3],10),  label: "Heute: Neuinfektionen" },
 				{ y: parseInt(numbers[4],10),  label: "Letzte 7 Tage: Neuinfektionen" },
 				{ y: parseInt(numbers[6],10),  label: "Gesamt: Verstorben" },
@@ -65,7 +65,7 @@ function visualize_numbers(numbers) {
 
 //Eingabe: 2 Bundesländer (Achtung!!! Datenbank-Formation der Bundesländer bedenken!!!)
 //Extrahiert die Werte für die Bundesländer und zeigt diese dann an :)
-//Die Funktion ist vollständig einsatzbereit, sobald die extract_values Funktion und die damit verbundene 
+//Die Funktion ist vollständig einsatzbereit, sobald die extract_values Funktion und die damit verbundene
 //Datenbankabfrage wieder funktioniert.
 function compare_bundeslaender(land1, land2) {
 	extract_values(land1);
@@ -78,7 +78,7 @@ function compare_bundeslaender(land1, land2) {
 	var land2_7_tage = parseInt(numbers_today[4], 10);
 	var land2_verstorben = parseInt(numbers_today[6], 10);
 
-	//Da nun die Werte erfolgreich extrahiert wurden, forme ich sie zu "normalen" Strings um (ohne diese 
+	//Da nun die Werte erfolgreich extrahiert wurden, forme ich sie zu "normalen" Strings um (ohne diese
 	//Datenbank-Punkte), um einen schönen Output zu ermöglichen :)
 	switch (land1) {
 		case "Nord­rhein-West­falen":
