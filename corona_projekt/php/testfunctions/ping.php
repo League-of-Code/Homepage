@@ -1,20 +1,24 @@
 <?php
 
 
-require_once('Ping/Ping.php');
-$host = 'https://www.leagueofcode.de:80';
-$ping = new Ping($host);
-$latency = $ping->ping();
-if ($latency) {
-print 'Latency is ' . $latency . ' ms';
+function urlExists($url=NULL)
+{
+    if($url == NULL) return false;
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $data = curl_exec($ch);
+    $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    if($httpcode>=200 && $httpcode<300){
+        return true;
+    } else {
+        return false;
+    }
 }
-else {
-print 'Host could not be reached.';
-}
 
-
-
-
+echo urlExists('https://www.leagueofcode.de');
 
 
  ?>
