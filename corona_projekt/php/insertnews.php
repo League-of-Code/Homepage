@@ -9,7 +9,7 @@
     $Uhrzeit = $_POST['Uhrzeit'];*/
 
 
-    if(!empty($Uploader)||!empty($Verlag)||!empty($Link)||!empty($Kategorie)||!empty($Caption)||!empty($headline)||!empty($Datum)||!empty($Uhrzeit)){
+    if(!empty($Uploader)&&!empty($Verlag)&&!empty($Link)&&!empty($Kategorie)&&!empty($Caption)&&!empty($headline)&&!empty($Datum)&&!empty($Uhrzeit)){
 
       echo "all fields are fill out, thank u much";
     }
