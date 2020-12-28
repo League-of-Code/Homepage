@@ -1,17 +1,16 @@
 <?php
 
 
-    $host = 'https://www.leagueofcode.de';
-    $port = 80;
-    $waitTimeoutInSeconds = 1;
-    if($fp = fsockopen($host,$port,$errCode,$errStr,$waitTimeoutInSeconds)){
-     // It worked
-     echo "it works";
-    } else {
-     // It didn't works
-     echo "It doesnt works";
-    }
-    fclose($fp);
+require_once('Ping/Ping.php');
+$host = 'https://www.leagueofcode.de:80';
+$ping = new Ping($host);
+$latency = $ping->ping();
+if ($latency) {
+print 'Latency is ' . $latency . ' ms';
+}
+else {
+print 'Host could not be reached.';
+}
 
 
 
