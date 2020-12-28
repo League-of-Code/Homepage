@@ -18,7 +18,7 @@ function urlExists($url=NULL)
     }
 }
 
-echo urlExists('https://www.leagueofcode.de');
+echo urlExists('https://www.leagueofcode.de:80');
 
 
  ?>
