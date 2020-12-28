@@ -6,7 +6,7 @@
     $Caption = $_POST['Caption'];
     $headline = $_POST['headline'];
     $Datum = $_POST['Datum'];
-    $Uhrzeit = $_POST['Uhrzeit'];*/
+    $Uhrzeit = $_POST['Uhrzeit'];
 
 
     if(!empty($Uploader)&&!empty($Verlag)&&!empty($Link)&&!empty($Kategorie)&&!empty($Caption)&&!empty($headline)&&!empty($Datum)&&!empty($Uhrzeit)){
