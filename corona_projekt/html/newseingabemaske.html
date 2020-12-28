@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Newseingabemaske</title>
+		<link rel="stylesheet" href="../css/index.css">
+
+    </head>
+
+    <body>
+      Hallo LeagueOfCode-ler,
+
+      hier könnt ihr gerne News für die NewsDatenbank ohne dabei direkten kontakt mit ihr zu haben.
+
+      Dies soll Userfehler vermeiden.
+
+
+      Füllt einfach die Maske vollständig aus.
+      Falls der Link schon in der Datenbank vorhanden sein sollte, werdet ihr von der Maske informiert ;)
+
+
+      <br>
+      <p><h1> Maske </h1></p>
+
+      <form action="../php/insertnews.php" method="POST">
+        <fieldset>
+          <label for="uploader"> Uploader:</label>
+          <input type="text" id="uploader" name="uploader"><br>
+
+          <label for="Verlag"> Verlag: </label>
+          <input type="text" id="Verlag" name="Verlag"><br>
+
+          <label for="Link"> Link:</label>
+          <input type="text" id="Link" name="Link"><br>
+
+          <label for="Kategorie"> Kategorie:</label>
+          <select name="Kategorie">
+    			  <option selected hidden Value "Rubrik"> Rubrik </option>
+    			  <option value="Lockdown">Lockdown</option>
+    			  <option value="Impfung">Impfung</option>
+    			  <option value="Pannen">Pannen</option>
+    			  <option value="Forschung">Forschung</option>
+            <option value="Politik">Politik</option>
+            <option value="other">other</option>
+
+    		  </select><br>
+
+
+          <label for="Caption"> Caption:</label>
+          <input type="text" id="Caption" name="Caption"><br>
+
+          <label for="headline"> headline: </label>
+          <input type="text" id="headline" name="headline"><br>
+
+          <label for="Datum"> Datum:</label>
+          <input type="date" id="Datum" name="Datum"><br>
+
+          <label for="Uhrzeit"> Uhrzeit:</label>
+          <input type="time" id="Uhrzeit" name="Uhrzeit"><br>
+
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
+    </body>
