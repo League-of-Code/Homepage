@@ -11,9 +11,9 @@
 }
   
 .Navigation a:hover{
-    opacity: 75%;
+    opacity: 50%;
 }
 
 #current{
-    opacity: 75%;
+    opacity: 50%;
 }
