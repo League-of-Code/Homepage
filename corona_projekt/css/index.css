@@ -1,13 +1,14 @@
 html{
   max-width: 100%;
   overflow-x: hidden;
+  text-decoration: none;
 }
 
 body{
   font-family: bahnschrift;
   font-size: 4vh;
   color: white;
-  background-color: rgb(75, 75, 75);
+  background-color: rgb(54, 54, 54);
 }
 
 #überschrift, #text{
