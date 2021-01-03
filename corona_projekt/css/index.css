@@ -8,7 +8,11 @@ body{
   font-size: 4vh;
   color: white;
   background-color: rgb(32, 32, 32);
+}
+
+a, a:hover, a:focus, a:active {
   text-decoration: none;
+  color: inherit;
 }
 
 #überschrift, #text{
