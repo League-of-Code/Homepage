@@ -1,5 +1,6 @@
 .Navigation{
     overflow: hidden;
+    color: brown;
 }
   
 .Navigation a{
@@ -14,5 +15,5 @@
 }
 
 #current{
-    color: brown;
+    opacity: 75%;
 }
