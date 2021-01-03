@@ -177,7 +177,7 @@ function compare_bundeslaender(land1, land2) {
 		case "Branden­burg":
 			land2 = "Brandenburg";
 			break;
-		case "Meck­lenburg-":
+		case "Meck­lenburg-Vorpommern":
 			land2 = "Mecklenburg-Vorpommern";
 			break;
 	}
