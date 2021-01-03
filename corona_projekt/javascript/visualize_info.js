@@ -45,7 +45,7 @@ function visualize_numbers(numbers) {
 			text: "Coronadaten: " + numbers[0]
 		},
 		axisY: {
-			title: "involved people"
+			title: "Personen"
 		},
 		data: [{
 			type: "column",
@@ -126,7 +126,7 @@ function compare_bundeslaender(land1, land2) {
 		case "Branden­burg":
 			land1 = "Brandenburg";
 			break;
-		case "Meck­lenburg-Vorpommern":
+		case "Meck­lenburg-":
 			land1 = "Mecklenburg-Vorpommern";
 			break;
 	}
@@ -177,7 +177,7 @@ function compare_bundeslaender(land1, land2) {
 		case "Branden­burg":
 			land2 = "Brandenburg";
 			break;
-		case "Meck­lenburg-Vorpommern":
+		case "Meck­lenburg-":
 			land2 = "Mecklenburg-Vorpommern";
 			break;
 	}
