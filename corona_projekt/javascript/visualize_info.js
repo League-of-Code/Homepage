@@ -52,7 +52,7 @@ function visualize_numbers(numbers) {
 			showInLegend: true,
 			backgroundColor: "grey",
 			legendMarkerColor: "grey",
-			legendText: "Fallzahlen aus " + numbers[0] + " am " + numbers[1],
+			legendText: "Fallzahlen aus " + numbers[0] + " vom " + numbers[1],
 			dataPoints: [
 				{ y: parseInt(numbers[3],10),  label: "Heute: Neuinfektionen" },
 				{ y: parseInt(numbers[4],10),  label: "Letzte 7 Tage: Neuinfektionen" },

@@ -20,6 +20,10 @@
     transition: all 1000ms ease;
 }
 
+#annotation{
+    font-size: 10px;
+}
+
 @media screen and (max-width: 1080px){
     .germany{
         width: 70%;
