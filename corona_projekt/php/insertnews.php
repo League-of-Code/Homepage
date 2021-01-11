@@ -7,6 +7,7 @@
     else {
         $exists = true;
     }
+    return $exists;
 }
 
 
