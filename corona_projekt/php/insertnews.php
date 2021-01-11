@@ -30,7 +30,7 @@
       die();
     }
 //errorhandling für kaputte URLS
-    if(urlchecker!){
+    if(urlchecker($Link)!){
       echo "Dieser Link ist nicht gültig!";
       die();
     }
