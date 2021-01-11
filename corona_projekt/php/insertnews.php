@@ -50,7 +50,8 @@
     $sql = "SELECT Link FROM  News";
     $result = $conn->query($sql);
     foreach($results as $urls){
-      if($urls ==$Link){
+      echo $urls;
+      if($urls == $Link){
         die("Link ist Vorhanden, soorrrey");
       }
     }
