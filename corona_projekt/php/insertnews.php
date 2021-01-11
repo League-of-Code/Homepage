@@ -31,12 +31,41 @@
       echo "Dieser Link ist nicht gültig!";
       die();
     }
+    //db öffnen
+
+    $servername = "localhost:3306";
+    $username = "cem";
+    $password = "YouAreLoco!?*1";
+    $dbname = "coding";
+
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
 
     //Datenbankabfrage für redundanz
-
+    $sql = "SELECT Link FROM  News";
+    $result = $conn->query($sql);
+    foreach($results as $urls){
+      if($urls ==$Link){
+        die("Link ist Vorhanden, soorrrey");
+      }
+    }
     //alles korrekt --> einspeißung der Daten in die DB
+    $sql = "INSERT INTO `News` (Headline,Caption,Date,Time,Category,Publisher,Link,Uploader) VALUES ('$headline','$Caption','$Datum','$Uhrzeit','$Kategorie','$Verlag','$Link','$Uploader')";
 
-
+    if ($conn->query($sql) === TRUE)
+		{
+			echo "New record created successfully";
+		}
+		else
+		{
+			echo "Error: " . $sql . "<br>" . $conn->error;
+		}
+    $conn->close();
 
 
 
