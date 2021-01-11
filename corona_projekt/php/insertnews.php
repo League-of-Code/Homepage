@@ -1,4 +1,15 @@
 <?php
+  function urlchecker($file){
+    $file_headers = @get_headers($file);
+    if(!$file_headers || $file_headers[0] == 'HTTP/1.1 404 Not Found') {
+        $exists = false;
+    }
+    else {
+        $exists = true;
+    }
+}
+
+
     $Uploader = $_POST['uploader'];
     $Verlag = $_POST['Verlag'];
     $Link = $_POST['Link'];
@@ -18,8 +29,11 @@
       echo "error: all fields must filled out.";
       die();
     }
-
-
+//errorhandling für kaputte URLS
+    if(urlchecker!){
+      echo "Dieser Link ist nicht gültig!";
+      die();
+    }
 
 
 
