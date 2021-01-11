@@ -46,15 +46,26 @@
       die("Connection failed: " . $conn->connect_error);
     }
 
+
     //Datenbankabfrage für redundanz
+
     $sql = "SELECT Link FROM  News";
     $result = $conn->query($sql);
-    foreach($results as $urls){
-      echo $urls;
-      if($urls == $Link){
-        die("Link ist Vorhanden, soorrrey");
+
+    if ($result->num_rows > 0)
+    {
+      while($row = $result->fetch_assoc())
+      {
+       if($row["Link"]==$Link)
+       {
+         echo "Link ist Vorhanden, soorrrey";
+         die();
+       }
       }
     }
+
+
+
     //alles korrekt --> einspeißung der Daten in die DB
     $sql = "INSERT INTO `News` (Headline,Caption,Date,Time,Category,Publisher,Link,Uploader) VALUES ('$headline','$Caption','$Datum','$Uhrzeit','$Kategorie','$Verlag','$Link','$Uploader')";
 
