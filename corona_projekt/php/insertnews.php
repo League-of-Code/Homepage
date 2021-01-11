@@ -21,20 +21,20 @@
     $Uhrzeit = $_POST['Uhrzeit'];
 
 
-    if(!empty($Uploader)&&!empty($Verlag)&&!empty($Link)&&!empty($Kategorie)&&!empty($Caption)&&!empty($headline)&&!empty($Datum)&&!empty($Uhrzeit)){
-
-      echo "all fields are fill out, thank u much";
-    }
-    else{
-
+    if(empty($Uploader)||empty($Verlag)||empty($Link)||empty($Kategorie)||empty($Caption)||empty($headline)||empty($Datum)||empty($Uhrzeit)){
       echo "error: all fields must filled out.";
       die();
     }
-//errorhandling für kaputte URLS
-    if(urlchecker($Link)!){
+
+    //errorhandling für kaputte URLS
+    if(urlchecker(!$Link)){
       echo "Dieser Link ist nicht gültig!";
       die();
     }
+
+    //Datenbankabfrage für redundanz
+
+    //alles korrekt --> einspeißung der Daten in die DB
 
 
 
