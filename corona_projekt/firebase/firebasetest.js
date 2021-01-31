@@ -13,13 +13,15 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  //firebase.analytics();
+  firebase.analytics();
 
   var firestore = firebase.firestore();
 
   var output = firestore.collection("storage").get().then((querySnapshot) => {
-    querySnapshot.foreach((doc) => {
+    querySnapshot.forEach((doc) => {
       console.log('${doc.id} => ${doc.data()}');
+      console.log(doc.data());
+        console.log(doc.id);
     });
   });
 
