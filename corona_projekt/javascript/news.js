@@ -1,4 +1,4 @@
-var newstickerbox = document.getElementByID("marquee");
+var newstickerbox = document.getElementById("marquee");
 
 
 
