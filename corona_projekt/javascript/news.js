@@ -9,9 +9,9 @@ xhttp.onreadystatechange = function() {
     newstickerbox = this.responseText;
 
       console.log("Hello world!");
-    
+
   }
 };
 
-xhttp.open("GET", "../php/ordered_output.php?q="+"hallo", true);
+xhttp.open("GET", "../php/newsticker.php?q="+"hallo", true);
 xhttp.send();
