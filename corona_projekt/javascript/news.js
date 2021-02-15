@@ -1,4 +1,4 @@
-var newstickerbox = document.getElementById("marquee");
+
 
 
 
@@ -6,7 +6,7 @@ var newstickerbox = document.getElementById("marquee");
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-    newstickerbox = this.responseText;
+    document.getElementById("marquee").innerHTML = this.responseText;
 
       console.log("Hello world!");
 
