@@ -1,0 +1,55 @@
+body{
+    background-image: url(../img/background_image.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: bahnschrift;
+    margin: 0px;
+}
+
+#main{
+    text-align: center;
+    color:black;
+    font-size: 20px;
+
+}
+
+#what_we_do, #our_course_of_study{
+    margin: 30px;
+    background-color: white;
+    border: 2px black;
+    opacity: 0.8;
+    text-align: left;
+}
+
+#what_we_do  h2, #what_we_do p{
+    margin: 10px;
+}
+
+#our_course_of_study h2, #our_course_of_study h3, #our_course_of_study p, #our_course_of_study a, #our_course_of_study strong{
+    margin: 10px;
+}
+
+#oth h2, #oth img, #oth a{
+    margin: 10px;
+}
+
+#medIT{
+    margin: 30px;
+    background-color: lightseagreen;
+    border: 2px black;
+    opacity: 0.8;
+}
+
+#techIT{
+    margin: 30px;
+    background-color: orangered;
+    border: 2px black;
+    opacity: 0.8;
+}
+
+#footer{
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
